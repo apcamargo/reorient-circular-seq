@@ -1,0 +1,16 @@
+[project]
+authors = ["Antonio Camargo <antoniop.camargo@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+description = "Reorient circular DNA sequences to prevent gene truncation at the edges"
+name = "reorient-circular-seq"
+platforms = ["linux-64", "osx-arm64", "osx-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.12,<4"
+pyzstd = ">=0.16.2,<0.17"
+pyrodigal-gv = ">=0.3.2,<0.4"
+rich = ">=13.9.3,<14"
+rich-click = ">=1.8.3,<2"
