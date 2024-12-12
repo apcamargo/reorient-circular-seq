@@ -221,7 +221,7 @@ def interval_difference(a: Interval, b: Interval) -> Interval:
 
 
 def get_intergenic_intervals(genes: Sequence[Gene], sort: bool) -> Interval:
-    gene_intervals = merge_intervals([(g.begin, g.end) for g in genes])
+    gene_intervals = merge_intervals([(g.begin - 1, g.end) for g in genes])
     intergenic_intervals = interval_difference(
         [(0, len(genes.sequence))], gene_intervals
     )
